@@ -35,7 +35,7 @@ function cacheFunction(cb) {
   return function(x){
     if(!cache.hasOwnProperty(x)){
       cache[x] = cb(x)
-    } return cache[x]
+    } else return cache[x]
   } 
 }
 // Bind
@@ -76,11 +76,11 @@ function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena){
 // Modificar los undefined por el código correspondiente en cada caso
 // Pista, tenes que usar bind para "bindear" algunos parámetros de la función crearCadena.
 
-let textoAsteriscos = crearCadena.bind(this, "*", "*") ;
+let textoAsteriscos = crearCadena.bind(this,  "*", "*") ;
 
 let textoGuiones = crearCadena.bind(this, "-", "-") ;
 
-let textoUnderscore = crearCadena.bind(this, "_", "_");
+let textoUnderscore = crearCadena.bind(this ,"_", "_");
 
 
 
