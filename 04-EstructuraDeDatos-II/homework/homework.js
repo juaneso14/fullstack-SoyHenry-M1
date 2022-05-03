@@ -50,32 +50,32 @@
       return null
   }
   if (current.next == null) {
-      const removeValue = current.value
-      this.head = null
-      this._length--
-      return removeValue
+      const removedValue = current.value;
+      this.head = null;
+      this._length--;
+      return removedValue;
   }
-  var valorEliminado = null
+  var removedValue = null
   while (current.next) {
       if (current.next.next === null) {
-          valorEliminado = current.next.value
+        removedValue = current.next.value;
           break
 
       }
-      current = current.next
+      current = current.next;
   }
-  current.next = null
-  this._length--
-  return valorEliminado
+  current.next = null;
+  this._length--;
+  return removedValue;
 }
 
  LinkedList.prototype.search = function (value) {
   var current = this.head
       while (current) {
       if ( current.value === value || (value instanceof Function && value(current.value) )) return current.value
-      current = current.next
+      current = current.next;
   }
-return null
+return null;
  }
 
 
